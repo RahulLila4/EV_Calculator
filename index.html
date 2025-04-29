@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EV Space Charging Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="SMG Logo" class="logo">
+    </div>
+    <h1>EV Space Charging Calculator</h1>
+  </header>
+
+  <main>
+    <section class="calculator">
+      <label>Number of Bikes:
+        <input type="number" id="bikes" min="0" value="0">
+      </label>
+      <label>Number of Cars:
+        <input type="number" id="cars" min="0" value="0">
+      </label>
+      <button onclick="calculate()">Calculate</button>
+    </section>
+
+    <section class="results">
+      <h2>Results</h2>
+      <p><i class="fas fa-cloud"></i> <strong>Annual Emissions Saved (kg CO₂):</strong> <span id="emissions">0</span></p>
+      <p><i class="fas fa-ruler-combined"></i> <strong>Area Required (sq.ft):</strong> <span id="area">0</span></p>
+      <p><i class="fas fa-bolt"></i> <strong>Single-Phase Load Required (amps):</strong> <span id="load">0</span></p>
+      <p><i class="fas fa-indian-rupee-sign"></i> <strong>Potential Annual Revenue (₹):</strong> ₹<span id="revenue">0</span></p>
+    </section>
+
+    <section>
+      <canvas id="chart"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <p>Developed by SMG | <a href="mailto:contact@smg.com">Contact Us</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
